@@ -27,30 +27,61 @@
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9u-cc-a9w">
-                                <rect key="frame" x="10" y="1144" width="144" height="30"/>
+                                <rect key="frame" x="15" y="1144" width="144" height="30"/>
                                 <state key="normal" title="Switch Transparency"/>
                                 <connections>
                                     <action selector="transparencyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJS-Kj-2Sy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ged-i7-z9J">
+                                <rect key="frame" x="15" y="1094" width="91" height="30"/>
+                                <state key="normal" title="Web Browser"/>
+                                <connections>
+                                    <action selector="webBrowserButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DfW-O0-GkC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okf-Ou-9Yk">
+                                <rect key="frame" x="15" y="1044" width="92" height="30"/>
+                                <state key="normal" title="Clock Widget"/>
+                                <connections>
+                                    <action selector="clockButtonWidgetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WvI-Qr-N6D"/>
+                                </connections>
+                            </button>
+                            <wkWebView alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQF-Et-G6l">
+                                <rect key="frame" x="200" y="24" width="634" height="950"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="4PS-ir-Uku" secondAttribute="bottom" id="27U-QB-QFO"/>
+                            <constraint firstItem="5iU-AI-EyA" firstAttribute="trailing" secondItem="UQF-Et-G6l" secondAttribute="trailing" id="3Z6-7f-k4r"/>
                             <constraint firstItem="5iU-AI-EyA" firstAttribute="bottom" secondItem="hca-5H-8RS" secondAttribute="bottom" id="Cas-lz-DOZ"/>
+                            <constraint firstItem="5iU-AI-EyA" firstAttribute="bottom" secondItem="UQF-Et-G6l" secondAttribute="bottom" constant="200" id="Cya-Dh-JRO"/>
+                            <constraint firstItem="ged-i7-z9J" firstAttribute="top" secondItem="Okf-Ou-9Yk" secondAttribute="bottom" constant="20" id="Eud-PC-eJA"/>
+                            <constraint firstItem="UQF-Et-G6l" firstAttribute="top" secondItem="5iU-AI-EyA" secondAttribute="top" id="L1p-js-iLU"/>
                             <constraint firstItem="hca-5H-8RS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OGJ-a1-C7F"/>
                             <constraint firstItem="5iU-AI-EyA" firstAttribute="bottom" secondItem="u9u-cc-a9w" secondAttribute="bottom" id="Qkc-Zm-8SN"/>
                             <constraint firstItem="4PS-ir-Uku" firstAttribute="trailing" secondItem="5iU-AI-EyA" secondAttribute="trailing" id="Vj3-fR-TGz"/>
+                            <constraint firstItem="u9u-cc-a9w" firstAttribute="top" secondItem="ged-i7-z9J" secondAttribute="bottom" constant="20" id="XnF-zV-xOK"/>
+                            <constraint firstItem="ged-i7-z9J" firstAttribute="leading" secondItem="5iU-AI-EyA" secondAttribute="leading" constant="15" id="cIe-ju-aX6"/>
                             <constraint firstItem="hca-5H-8RS" firstAttribute="leading" secondItem="5iU-AI-EyA" secondAttribute="leading" id="cRK-A6-UAd"/>
                             <constraint firstItem="5iU-AI-EyA" firstAttribute="trailing" secondItem="hca-5H-8RS" secondAttribute="trailing" id="hML-ba-71F"/>
-                            <constraint firstItem="u9u-cc-a9w" firstAttribute="leading" secondItem="5iU-AI-EyA" secondAttribute="leading" constant="10" id="iiZ-TG-IZN"/>
+                            <constraint firstItem="u9u-cc-a9w" firstAttribute="leading" secondItem="5iU-AI-EyA" secondAttribute="leading" constant="15" id="iiZ-TG-IZN"/>
+                            <constraint firstItem="Okf-Ou-9Yk" firstAttribute="leading" secondItem="5iU-AI-EyA" secondAttribute="leading" constant="15" id="ncF-Bx-1Zb"/>
                             <constraint firstItem="4PS-ir-Uku" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="t5w-cc-Pks"/>
+                            <constraint firstItem="UQF-Et-G6l" firstAttribute="leading" secondItem="5iU-AI-EyA" secondAttribute="leading" constant="200" id="vok-Mf-91O"/>
                             <constraint firstItem="4PS-ir-Uku" firstAttribute="leading" secondItem="5iU-AI-EyA" secondAttribute="leading" id="vwT-6J-aqr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5iU-AI-EyA"/>
                     </view>
                     <connections>
                         <outlet property="opaqueBgnd" destination="4PS-ir-Uku" id="Nju-xo-phC"/>
+                        <outlet property="webview" destination="UQF-Et-G6l" id="v1R-GQ-1XK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

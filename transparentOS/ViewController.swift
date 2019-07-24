@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
 
     @IBOutlet var opaqueBgnd: UIView!
+    
+    @IBOutlet var webview: WKWebView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +33,28 @@ class ViewController: UIViewController {
                 self.opaqueBgnd.alpha = 1
             }
         }
-        
-        
     }
+    
+    @IBAction func webBrowserButtonPressed(_ sender: Any) {
+        
+        if (self.webview.alpha.isEqual(to: 1.0)) {
+            UIView.animate(withDuration: 1) {
+                self.webview.alpha = 0
+            }
+        }
+        else if (self.webview.alpha.isEqual(to: 0.0)) {
+            UIView.animate(withDuration: 1) {
+                self.webview.alpha = 1
+            }
+            
+            self.webview.load(URLRequest(url: URL(string: "https://www.google.com/")!))
+        }
+    }
+    
+    
+    @IBAction func clockButtonWidgetPressed(_ sender: Any) {
+    }
+    
     
 }
 
