@@ -12,6 +12,7 @@
 		EE94C05622E8B2490025A873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE94C05422E8B2490025A873 /* Main.storyboard */; };
 		EE94C05822E8B24C0025A873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE94C05722E8B24C0025A873 /* Assets.xcassets */; };
 		EE94C05B22E8B24C0025A873 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE94C05922E8B24C0025A873 /* LaunchScreen.storyboard */; };
+		EE94C06322E8B3BD0025A873 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94C06222E8B3BD0025A873 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EE94C05722E8B24C0025A873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE94C05A22E8B24C0025A873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE94C05C22E8B24C0025A873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE94C06222E8B3BD0025A873 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				EE94C05722E8B24C0025A873 /* Assets.xcassets */,
 				EE94C05922E8B24C0025A873 /* LaunchScreen.storyboard */,
 				EE94C05C22E8B24C0025A873 /* Info.plist */,
+				EE94C06222E8B3BD0025A873 /* CameraView.swift */,
 			);
 			path = transparentOS;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE94C06322E8B3BD0025A873 /* CameraView.swift in Sources */,
 				EE94C05322E8B2490025A873 /* ViewController.swift in Sources */,
 				EE94C05122E8B2490025A873 /* AppDelegate.swift in Sources */,
 			);
@@ -283,6 +287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64HF67A742;
 				INFOPLIST_FILE = transparentOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 64HF67A742;
 				INFOPLIST_FILE = transparentOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
