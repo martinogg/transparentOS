@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var webview: WKWebView!
     
+    @IBOutlet var clockWidget: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +54,17 @@ class ViewController: UIViewController {
     
     
     @IBAction func clockButtonWidgetPressed(_ sender: Any) {
+        
+        if (self.clockWidget.alpha.isEqual(to: 1.0)) {
+            UIView.animate(withDuration: 1) {
+                self.clockWidget.alpha = 0
+            }
+        }
+        else if (self.clockWidget.alpha.isEqual(to: 0.0)) {
+            UIView.animate(withDuration: 1) {
+                self.clockWidget.alpha = 1
+            }
+        }
     }
     
     
